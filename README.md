@@ -8,7 +8,7 @@ In the following you can find a list of projects developed during my MS in Appli
 
 Final Project of the course "Probability and Statistics for Artificial Intelligence"
 
-We have analyzed an existing dataset including 17 attributes possibly linked to obesity to (i) identify the most important factors related to different obesity levels, and (ii) predict if one is overweight/obese or not through two both a logistic regression model and a decision tree classifier. 
+We have analyzed an existing dataset including 17 attributes possibly linked to obesity to identify the most important factors related to different obesity levels (underweight, normal, overweight I, overweight II, obesity I, obesity II and obesity III). We have then tested a logistic regression model and a decision tree classifier to predict if one is overweight/obese or not based on the most influential attributes associated to overweight/obesity identified at the first step (number of meals per day, daily water consumption, physical activity frequency per week, time using technology per day, age and height).
 
 ### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
 
