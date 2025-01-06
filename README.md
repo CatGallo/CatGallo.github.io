@@ -4,7 +4,7 @@ Hello! Welcome to my personal portfolio!
 ## Projects
 In the following you can find a list of projects developed during my MS in Applied Artificial Intelligence at San Diego University. 
 
-### Text_To_Image - [Github Link]() - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
+### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
 
 Final Project of the course of Introduction to Computer Vision (2023)
 
