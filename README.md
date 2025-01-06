@@ -4,6 +4,12 @@ Hello! Welcome to my personal portfolio!
 ## Projects
 In the following you can find a list of projects developed during my MS in Applied Artificial Intelligence at San Diego University. 
 
+### Study_Of_Obesity - [Github Link]()
+
+Final Project of the course of Probability and Statistics for Artificial Intelligence
+
+We have analyzed an existing dataset including 17 attributes possibly linked to obesity to (i) identify the most important factors related to overweight and obesity, and (ii) predict if one is overweight/obese or not based on the most influential attributes associated to overweight/obesity through two different methods. 
+
 ### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
 
 Final Project of the course of Introduction to Computer Vision (2023)
