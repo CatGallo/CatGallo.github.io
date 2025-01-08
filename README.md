@@ -8,13 +8,25 @@ In the following you can find a list of projects developed during my MS in Appli
 
 Final Project of the course "Probability and Statistics for Artificial Intelligence"
 
-We analyzed an [existing dataset](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition) including 2111 records and 17 attributes possibly linked to different weight levels (underweight, normal, overweight I, overweight II, obesity I, obesity II and obesity III). We first identified the most important factors related to overweight and obesity (number of meals per day, daily water consumption, physical activity frequency per week, time using technology per day, age and height) and then trained a decision tree classifier to predict if one is overweight/obese or not. The model exhibits an accuracy of 85% and the values for precision, recall and f1-score are 0.9/0.72, 0.89/0.74 and 0.89/0.73 for people suffering/not suffering from overweight or obesity, respectively. 
+We analyzed an [existing dataset](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition) including 2111 records and 17 attributes possibly linked to different weight levels (underweight, normal, overweight I, overweight II, obesity I, obesity II and obesity III). 
+
+We first identified the most important factors related to overweight and obesity (number of meals per day, daily water consumption, physical activity frequency per week, time using technology per day, age and height) and then trained a decision tree classifier to predict if one is overweight/obese or not based on the identified factors. 
+
+The final model exhibits an accuracy of 85% and the values for precision, recall and f1-score are 0.9/0.72, 0.89/0.74 and 0.89/0.73 for people suffering/not suffering from overweight or obesity, respectively. 
 
 ### COVID_Detection - [Github Link](https://github.com/CatGallo/COVID_Detection.git)
 
 Final Project of the course "Introduction to Artificial Intelligence"
 
-We tested three different Convolutional Neural Network models, VGG16, ResNet50 and InceptionV3, to classify chest X-Ray images into normal or Covid-19 infected. To train and test these models we used the [Covid X-Ray Dataset](https://www.kaggle.com/datasets/ahemateja19bec1025/covid-xray-dataset) including 1301 images without Covid-19 and 1790 images with Covid-19. We applied image standardization and normalization to the entire dataset and image augmentation to the training set. VGG16 shows the highest performance with 94.2% accuracy, 98.5% sensitivity, and 91.1% specificity. InceptionV3 trails closely with 93.4% accuracy, 93.5% sensitivity and 93.3% specificity, while ResNet50 has 84.7% accuracy, 91.6% sensitivity and 79.6% specificity. 
+We tested three different Convolutional Neural Network models, VGG16, ResNet50 and InceptionV3, to classify chest X-Ray images into normal or Covid-19 infected. To train and test these models we used the [Covid X-Ray Dataset](https://www.kaggle.com/datasets/ahemateja19bec1025/covid-xray-dataset) including 1301 images without Covid-19 
+
+<img src="assets/no_covid.jpg" alt="img-verification" width=500>
+
+and 1790 images with Covid-19
+
+<img src="assets/covid.jpg" alt="img-verification" width=500>
+
+. We applied image standardization and normalization to the entire dataset and image augmentation to the training set. VGG16 shows the highest performance with 94.2% accuracy, 98.5% sensitivity, and 91.1% specificity. InceptionV3 trails closely with 93.4% accuracy, 93.5% sensitivity and 93.3% specificity, while ResNet50 has 84.7% accuracy, 91.6% sensitivity and 79.6% specificity. 
 
 ### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
 
@@ -34,9 +46,9 @@ The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While 
 
 Our machine learning algorithms were built based on the [mHealth Dataset](https://archive.ics.uci.edu/dataset/319/mhealth+dataset), which reports the data recorded by the three sensors described above (a total of 24 features) for 10 different subjects. We combined the data files of the 10 subjects thereby obtaining a data frame of over 1.2 million entries. 
 
-To classify the activity performed by the user we tested 3 different models, a K Nearest Neighbors (KNN) n = 6 model, a Support Vector Machine (SVM) model and a Random Forest Classifier (RFC) model with the scikit-learn default number of estimators set at 100. Input data were extracted from the time series recorded by all the sensors for the first 6 subjects, by calculating a rolling average and standard deviation over a set period of 4 seconds for each of the available features. The RFC model showed the best overall performance with a 92.9% validation accuracy and a 97.9% accuracy on the testing set. 
+To classify the activity performed by the user we tested 3 different models, a K Nearest Neighbors (KNN) n = 6 model, a Support Vector Machine (SVM) model and a Random Forest Classifier (RFC) model with the scikit-learn default number of estimators set at 100. Input data were extracted from the time series recorded by all the sensors for the first 6 subjects, by calculating a rolling average and standard deviation over a set period of 4 seconds for each of the available features. The RFC model showed the best overall performance with a 92.9% validation accuracy and a 97.9% accuracy on the testing set. We have in fact verified that our RFC model can misclassify climbing stairs with walking and knee bends, thereby leading to sporadic errors. 
 
-To predict the average user's HR for the next 5-10 heartbeats, we adopted an LSTM model. This time, considering that ECGs can drammatically change from one subject to another, we trained one subject-specific LSTM model starting from one ECG signal of one subject only. The training set is nothing more than a sequence of average HR values, with each HR value representing the average of 5 sequential HRs in a portion of the original HR sequence extracted from the ECG signal of the chosen subject. HRs can be calculated as 60/RRs, with RRs the distances between siccessive peaks in an ECG signal. By comparing the real and predicted average seguence of HR calues for the chosen subject, we got the following errors: mean+/-std: -0.94+/-13.37%, 25th percentile: -9.77%, 50th percentile: -0.14%, 75th percentile: 8.80%.
+To predict the average user's HR for the next 5-10 heartbeats, we adopted an LSTM model. This time, considering that ECGs can drammatically change from one subject to another, we trained one subject-specific LSTM model starting from one ECG signal of one subject only. The training set is nothing more than a sequence of average HR values, with each HR value representing the average of 5 sequential HRs in a portion of the original HR sequence extracted from the ECG signal of the chosen subject. HRs can be calculated as 60/RRs, with RRs the distances between siccessive peaks in an ECG signal. By comparing the real and predicted average seguence of HR values for the chosen subject, we got the following errors: mean+/-std: -0.94+/-13.37%, 25th percentile: -9.77%, 50th percentile: -0.14%, 75th percentile: 8.80%.
 
 ## Contacts
 You can reach me at [LinkedIn](https://www.linkedin.com/in/caterina-gallo) or [GitHub](https://github.com/CatGallo).
