@@ -30,8 +30,7 @@ We proposed a physical activity tracking system that exploits machine learning a
 
 The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While the chest sensor consists of an accelerometer to measure position and 2 electrocardiogram sensors, the smartwatch and the ankle sensors contain an accelerometer, a gyroscope to detect motion and a magnetometer to recognize changes in orientation. The chest and ankle sensors are also equipped with a Bluetooth connectivity module to transfer data to the smartwatch. The latter then runs the machine learning algorithms we developed in the form of edge processing and shows the final data in the form of key summary statistics for the user to see. An example of tableau dashboard for this IoT device is provided below.
 
-![Dashboard](assets/Dashboard.png)
-*Example of data analytics to show to users for this IoT device*
+<img src="assets/Dashboard.png" alt="img-verification" width=500>
 
 Our machine learning algorithms were built based on the [mHealth Dataset](https://archive.ics.uci.edu/dataset/319/mhealth+dataset), which reports the data recorded by the three sensors described above (a total of 24 features) for 10 different subjects. We combined the data files of the 10 subjects thereby obtaining a data frame of over 1.2 million entries. 
 
