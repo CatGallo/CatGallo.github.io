@@ -20,13 +20,15 @@ Final Project of the course "Introduction to Artificial Intelligence"
 
 We tested three different Convolutional Neural Network models, VGG16, ResNet50 and InceptionV3, to classify chest X-Ray images into normal or Covid-19 infected. To train and test these models we used the [Covid X-Ray Dataset](https://www.kaggle.com/datasets/ahemateja19bec1025/covid-xray-dataset) including 1301 images without Covid-19 
 
-<img src="assets/no_covid.jpg" alt="img-verification" width=500>
+<img src="assets/no_covid.jpg" alt="img-verification" width=400>
 
 and 1790 images with Covid-19.
 
-<img src="assets/covid.jpg" alt="img-verification" width=500>
+<img src="assets/covid.jpg" alt="img-verification" width=400>
 
-We applied image standardization and normalization to the entire dataset and image augmentation to the training set. VGG16 shows the highest performance with 94.2% accuracy, 98.5% sensitivity, and 91.1% specificity. InceptionV3 trails closely with 93.4% accuracy, 93.5% sensitivity and 93.3% specificity, while ResNet50 has 84.7% accuracy, 91.6% sensitivity and 79.6% specificity. 
+We applied image standardization and normalization to the entire dataset and image augmentation to the training set. 
+
+VGG16 shows the highest performance with 94.2% accuracy, 98.5% sensitivity, and 91.1% specificity. InceptionV3 trails closely with 93.4% accuracy, 93.5% sensitivity and 93.3% specificity, while ResNet50 has 84.7% accuracy, 91.6% sensitivity and 79.6% specificity. 
 
 ### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
 
