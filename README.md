@@ -18,13 +18,19 @@ We then trained a decision tree classifier to predict if one is overweight/obese
 
 Final Project of the course "Introduction to Artificial Intelligence"
 
-We tested three different Convolutional Neural Network models, VGG16, ResNet50 and InceptionV3, to classify chest X-Ray images into normal or Covid-19 infected. To train and test these models we used the [Covid X-Ray Dataset](https://www.kaggle.com/datasets/ahemateja19bec1025/covid-xray-dataset) including 1301 images without Covid-19 
+We tested three different Convolutional Neural Network models, VGG16, ResNet50 and InceptionV3, to classify chest X-Ray images into normal or Covid-19 infected. 
 
-<img src="assets/no_covid.jpg" alt="img-verification" width=400>
+To train and test these models we used the [Covid X-Ray Dataset](https://www.kaggle.com/datasets/ahemateja19bec1025/covid-xray-dataset) including 1301 images without Covid-19 and 1790 images with Covid-19.
 
-and 1790 images with Covid-19.
+<figure>
+<img src="assets/no_covid.jpg" width=400>
+*Figure 1 - Examples of images without Covid*
+</figure>
 
-<img src="assets/covid.jpg" alt="img-verification" width=400>
+<figure>
+<img src="assets/covid.jpg" width=400>
+<figcaption>Figure 2 - Examples of images with Covid</figcaption>
+</figure>
 
 We applied image standardization and normalization to the entire dataset and image augmentation to the training set. 
 
