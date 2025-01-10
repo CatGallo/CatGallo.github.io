@@ -69,7 +69,7 @@ The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While 
 
 <figure>
 <figcaption>Figure 4 - Structure and functioning of the IoT system </figcaption>
-<img src="assets/iot_system.png" width=500>
+<img src="assets/iot_system.png" width=600>
 </figure>
 
 <figure>
@@ -85,7 +85,7 @@ To predict the average user's HR for the next 5-10 heartbeats, we adopted an LST
 
 <figure>
 <figcaption>Figure 6 - Comparison between real and predicted average HR sequences for one subject </figcaption>
-<img src="assets/hr_sequences.png" width=500>
+<img src="assets/ecg_signals.png" width=400>
 </figure>
 
 ## Contacts
