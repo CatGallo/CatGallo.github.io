@@ -96,7 +96,120 @@ Final Project of the course "Capstone Project"
 
 We developed an application able to understand live sign language questions and retun textual and sign language answers on general topics. Such a technology could be useful to deaf and dumb people who knows the American Sign Language (ASL), which is the most common sign language in North America. 
 
-For this project we built two machine learning models - a convolutional neural network (CNN) and a [Flan-T5-Base chatbot model](https://huggingface.co/google/flan-t5-base) - and an application able to interact with the two models. The CNN was used as sign language interpreter and was trained on the [ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet), while the Flan-T5-Base chatbot model was adopted to hold on textual conversation and was fine-tuned on the [3K Conversations Dataset for ChatBot](https://www.kaggle.com/datasets/kreeshrajani/3k-conversations-dataset-for-chatbot). Our final application collects the user's sign language gestures through a camera and manages the flow of data in and out each model, thereby showing the final chatbot response to the user. 
+For this project we built two machine learning models - a convolutional neural network (CNN) and a [Flan-T5-Base chatbot model](https://huggingface.co/google/flan-t5-base) - and an application to interact with the two models. The CNN was used as sign language interpreter, while the Flan-T5-Base chatbot model was adopted to hold on textual conversation. Our final application collects the user's sign language gestures through a camera, manages the flow of data in and out the two machine learning models, and shows the chatbot response to the user as both a text and a sequence of ASL images. 
+
+The CNN model was trained on the [ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet), which consists of 3000 images for each of the 26 letters of the US alphabet and for three additional signs: "space", "delete" and "nothing". All images were rescaled and converted to grayscale, and different augmentation techniques (rotation, horizontal and vertical shifting, shearing, zooming and horizontal flipping) were applied to the training set of images. The chatbot model was fine-tuned on the [3K Conversations Dataset for ChatBot](https://www.kaggle.com/datasets/kreeshrajani/3k-conversations-dataset-for-chatbot) including 3725 questions and answers. During text preprocessing, we removed contractions, eliminated punctuation and applied lowercasing. 
+
+We verified the good functioning of the CNN model on a set of 87000 different sign language images, and obtained that the model acuracy is 0.99 and the macro/weighted averages of the test precision, recall and f1-score are 0.99 too. Based on the representation of the training and validation loss for the chatbot model, the chatbot model successufully learned its task and its performance was qualitatively evaluated through an initial list of 20 questions to be expanded in the future. 
+
+<table>
+  <caption>Table 1 - List of questions asked to the chatbot model and its answers</caption>
+  <tr>
+    <th>ID</th>
+    <th>Question Text</th>
+    <th>Answer Text</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Hello, how are you?</td>
+    <td>I'm fine</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>What is your name?</td>
+    <td>samuel samuel</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Are you happy today?</td>
+    <td>I am happy</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>What is your favorite color?</td>
+    <td>blue</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>What is your dream?</td>
+    <td>i want to be a good man</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Do you think it will rain in the afternoon?</td>
+    <td>It will be cloudy</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>What is the capital of California?</td>
+    <td>san francisco</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>What is the capital of Italy?</td>
+    <td>Rome</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>When does summer begin?</td>
+    <td>summer</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>What is the best drink for a hangover?</td>
+    <td>a stout</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>What is the probability that two apples will fall at the same time?</td>
+    <td>1/2</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Do you know the definition of artificial intelligence?</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Could you please recommend an American dish?</td>
+    <td>a fried chicken sandwich</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Where would you go on vacation this summer?</td>
+    <td>sweden</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>What is Buddhism?</td>
+    <td>Buddhism is a religion</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>Could you suggest a person's name with C?</td>
+    <td>charlie cleveland</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>Who is Chris Martin?</td>
+    <td>british actor</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>When will next Easter be celebrated?</td>
+    <td>in the spring</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>What is rosemary?</td>
+    <td>rosemary is a genus of plants</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>What would you do in case of dehydration?</td>
+    <td>drink water</td>
+  </tr>
+</table>
 
 ## Contacts
 You can reach me at [LinkedIn](https://www.linkedin.com/in/caterina-gallo) or [GitHub](https://github.com/CatGallo).
