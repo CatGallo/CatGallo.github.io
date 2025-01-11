@@ -88,5 +88,15 @@ To predict the average user's HR for the next 5-10 heartbeats, we adopted an LST
 <img src="assets/ecg_signals.png" width=400>
 </figure>
 
+### AS_Linguist - [Github Link]()
+
+Adhikari, S., Gallo, C., & Thai, P. (2024, August 12). A.S. Linguist Final Project [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
+
+Final Project of the course "Capstone Project"
+
+We developed an application able to understand live sign language questions and retun textual and sign language answers on general topics. Such a technology could be useful to deaf and dumb people who knows the American Sign Language (ASL), which is the most common sign language in North America. 
+
+For this project we built two machine learning models - a convolutional neural network (CNN) and a [Flan-T5-Base chatbot model](https://huggingface.co/google/flan-t5-base) - and an application able to interact with the two models. The CNN was used as sign language interpreter and was trained on the [ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet), while the Flan-T5-Base chatbot model was adopted to hold on textual conversation and was fine-tuned on the [3K Conversations Dataset for ChatBot](https://www.kaggle.com/datasets/kreeshrajani/3k-conversations-dataset-for-chatbot). Our final application collects the user's sign language gestures through a camera and manages the flow of data in and out each model, thereby showing the final chatbot response to the user. 
+
 ## Contacts
 You can reach me at [LinkedIn](https://www.linkedin.com/in/caterina-gallo) or [GitHub](https://github.com/CatGallo).
