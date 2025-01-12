@@ -98,11 +98,16 @@ We developed an application able to understand live sign language questions and 
 
 For this project we built two machine learning models - a convolutional neural network (CNN) and a [Flan-T5-Base chatbot model](https://huggingface.co/google/flan-t5-base) - and an application to interact with the two models. The CNN was used as sign language interpreter, while the Flan-T5-Base chatbot model was adopted to hold on textual conversation. Our final application collects the user's sign language gestures through a camera, manages the flow of data in and out the two machine learning models, and shows the chatbot response to the user as both a text and a sequence of ASL images. 
 
-The CNN model was trained on the [ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet), which consists of 3000 images for each of the 26 letters of the US alphabet and for three additional signs: "space", "delete" and "nothing" (see Figure 7). All images were rescaled and converted to grayscale, and different augmentation techniques (rotation, horizontal and vertical shifting, shearing, zooming and horizontal flipping) were applied to the training set of images. The chatbot model was fine-tuned on the [3K Conversations Dataset for ChatBot](https://www.kaggle.com/datasets/kreeshrajani/3k-conversations-dataset-for-chatbot) including 3725 questions and answers. During text preprocessing, we removed contractions, eliminated punctuation and applied lowercasing. 
+The CNN model was trained on the [ASL Alphabet Dataset](https://www.kaggle.com/datasets/grassknoted/asl-alphabet), which consists of 3000 images for each of the 26 letters of the US alphabet and for three additional signs: "space", "delete" and "nothing" (see Figure 7). All images were rescaled and converted to grayscale, and different augmentation techniques (rotation, horizontal and vertical shifting, shearing, zooming and horizontal flipping) were applied to the training set of images. The chatbot model was fine-tuned on the [3K Conversations Dataset for ChatBot](https://www.kaggle.com/datasets/kreeshrajani/3k-conversations-dataset-for-chatbot), which includes 3725 questions and answers, each containing around 6 words and 31 characters (see Figure 8). During text preprocessing, we removed contractions, eliminated punctuation and applied lowercasing. 
 
 <figure>
 <figcaption>Figure 7 -  Images extracted from the ASL Alphabet Dataset for all the 29 classes </figcaption>
 <img src="assets/asl_signs.png" width=400>
+</figure>
+
+<figure>
+<figcaption>Figure 8 - Boxplots of the number of words and characters in questions and answers of the 3K Conversations Dataset for chatbot </figcaption>
+<img src="assets/boxplots_chatbot.png" width=400>
 </figure>
 
 We verified the good functioning of the CNN model on a set of 87000 different sign language images, and obtained a model acuracy of 0.99 and the macro/weighted averages of the test precision, recall and f1-score equal to 0.99. Based on the representation of the training and validation loss for the chatbot model, the chatbot model successufully learned its task and its performance was qualitatively evaluated through an initial list of 20 questions (see Table 1) to be expanded in the future. 
