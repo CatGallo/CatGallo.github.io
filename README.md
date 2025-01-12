@@ -38,6 +38,16 @@ To train and test these models we used the [Covid X-Ray Dataset](https://www.kag
 
 VGG16 showed the highest performance with 94.2% accuracy, 98.5% sensitivity, and 91.1% specificity. InceptionV3 trailed closely with 93.4% accuracy, 93.5% sensitivity and 93.3% specificity, while ResNet50 had 84.7% accuracy, 91.6% sensitivity and 79.6% specificity. Despite the high scores associated with the three models, additional adjustments would be necessary in future model developments. The ResNet50 model would in fact require a greater number of epochs, which we reduced due to memory limitations. Also, the head layer structure and parameters like the learning rate should be individually optimized for each model instead of keeping them consistent across models,  as we did here to get a direct comparison. Finally, additional patient-specific information, e.g. the number of days from the first symptoms or the presence of other clinical conditions, could further improve the capability of our models to early detect Covid-19 and similar respiratory diseases like pneumonia. 
 
+### QA_System - [Github Link]() - [Application Deployment](http://willacuna.pythonanywhere.com/projects)
+
+Final Project of the course of "Natural Language Processing" 
+
+Acuna, W., Gallo, C., & Ostrovsky, S. (2023, October 23). Question Answering System using DistilBERT [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
+
+We developed a Question Answering (QA) system through the [DistilBERT model](https://huggingface.co/transformers/v4.3.3/custom_datasets.html?highlight=fine%20tune), which was fine-tuned on the [Standford Question Answering Dataset (SQuAD)] (https://huggingface.co/transformers/v4.3.3/custom_datasets.html?highlight=fine%20tune). 
+
+The SQuAD dataset includes 87,599 training and 10,570 validation samples, each consisting of a paragraph, a context, a question and an answer. However, in order to expedite the development process, we relied on a reduced version of the original dataset, with 10,000 training and 1,200 validation samples. Also, we added to each sample additional information (the character position of the answer end in the contect as well as the the start and end token positions in the answers) to enhance model efficiency and effectiveness. 
+
 ### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
 
 Final Project of the course of "Introduction to Computer Vision" 
