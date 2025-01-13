@@ -250,7 +250,46 @@ We developed a Question Answering (QA) system through the [DistilBERT model](htt
 
 The SQuAD dataset includes 87,599 training and 10,570 validation samples, each consisting of a paragraph, a context, a question and an answer. In order to expedite the development process, we relied on a reduced version of the original dataset, with 10,000 training and 1,200 validation samples. However, we added to each sample additional information (the character position of the answer end in the context, and the start and end token positions in the answers) to enhance model efficiency and effectiveness. 
 
-After training and validation, the performance of the final model was measured through two different metrics: the exact match accuracy, which corresponds to the percentage of answers for which the start and end positions in the contexts are properly identified by the model, and the F1-score, which is a balanced measure of the model capability to precisely answer questions. We got an exact match accuracy of 54% and an F1-score of 44.57%. Thus, despite being imperfect, our model is able to provide very accurate answers in one out of two cases, especially when answers are explicitely indicated in the context. Future model improvements will involve data augmentation, fine-tuning hyperparameters, and larger models exploration. Finally, deploying the model for practical applications and integrating users' feedbacks for continuous improvements represent two additional objectives in future model development. 
+After training and validation, the performance of the final model was qualitatively evaluated through a number of text contexts and questions (see Table 3), and quntitatively measured through two different metrics: the exact match accuracy, which corresponds to the percentage of answers for which the start and end positions in the contexts are properly identified by the model, and the F1-score, which is a balanced measure of the model capability to precisely answer questions. We got an exact match accuracy of 54% and an F1-score of 44.57%. Thus, despite being imperfect, our model is able to provide very accurate answers in one out of two cases, especially when answers are explicitely indicated in the context. Future model improvements will involve data augmentation, fine-tuning hyperparameters, and larger models exploration. Finally, deploying the model for practical applications and integrating users' feedbacks for continuous improvements represent two additional objectives in future model development. 
+
+<table>
+  <caption>Table 3 - Examples of test contexts and questions to qualitatively evaluate the answers provided by the fine-tuned DistilBERT model</caption>
+  <tr>
+    <th>Test Contexts</th>
+    <th>Test Questions</th>
+    <th>Model Answers</th>
+  </tr>
+  <tr>
+    <td>The Eiffel Tower is a famous landmark in Paris, France.</td>
+    <td>What city is the Eiffel Tower located in?</td>
+    <td>paris</td>
+  </tr>
+  <tr>
+    <td>Mount Everest is the tallest mountain in the world.</td>
+    <td>How tall is Mount Everest?</td>
+    <td>tallest</td>
+  </tr>
+  <tr>
+    <td>The Great Wall of China is a historic fortification in China.</td>
+    <td>Where is the Great Wall of China located?</td>
+    <td>china</td>
+  </tr>
+  <tr>
+    <td>Super Bowl 50 was an American football game to determine the champion of the National Football League (NFL) for the 2015 season. The American Football Conference (AFC) champion Denver Broncos defeated the National Football Conference (NFC) champion Carolina Panthers 24\u201310 to earn their third Super Bowl title. The game was played on February 7, 2016, at Levi's Stadium in the San Francisco Bay Area at Santa Clara, California. As this was the 50th Super Bowl, the league emphasized the \"golden anniversary\" with various gold-themed initiatives, as well as temporarily suspending the tradition of naming each Super Bowl game with Roman numerals (under which the game would have been known as \"Super Bowl L\"), so that the logo could prominently feature the Arabic numerals 50.",</td>
+    <td>Which NFL team represented the AFC at Super Bowl 50?</td>
+    <td>denver broncos</td>
+  </tr>
+  <tr>
+    <td>The Panthers finished the regular season with a 15\u20131 record, and quarterback Cam Newton was named the NFL Most Valuable Player (MVP). They defeated the Arizona Cardinals 49\u201315 in the NFC Championship Game and advanced to their second Super Bowl appearance since the franchise was founded in 1995. The Broncos finished the regular season with a 12\u20134 record, and denied the New England Patriots a chance to defend their title from Super Bowl XLIX by defeating them 20\u201318 in the AFC Championship Game. They joined the Patriots, Dallas Cowboys, and Pittsburgh Steelers as one of four teams that have made eight appearances in the Super Bowl.</td>
+    <td>Which Carolina Panthers player was named Most Valuable Player?</td>
+    <td>cam newton</td>
+  </tr>
+  <tr>
+    <td>The Broncos took an early lead in Super Bowl 50 and never trailed. Newton was limited by Denver's defense, which sacked him seven times and forced him into three turnovers, including a fumble which they recovered for a touchdown. Denver linebacker Von Miller was named Super Bowl MVP, recording five solo tackles, 2\u00bd sacks, and two forced fumbles</td>
+    <td>"Who was the Super Bowl 50 MVP?</td>
+    <td>von miller</td>
+  </tr>
+</table>
 
 ### Life_Expectancy - [Github Link](https://github.com/CatGallo/Machine_Learning_Team_Project)
 
