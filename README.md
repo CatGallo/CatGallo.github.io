@@ -44,12 +44,12 @@ Final Project of the course "Machine Learning: Fundamentals and Applications"
 
 Gallo, C., & Lucero, C. (n.d). Life Expectancy Through Machine Learning [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
 
-We used the [Life Expectancy (WHO) Dataset](https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who) to analyze the role of 21 different factors on life expectancy in both developed and developing countries between 2000 and 2015. Based on the permutation importance plots, we found that the most important factor on life expectancy is suffering from HIV in developing countries and income composition in developed countries. 
+We used the [Life Expectancy (WHO) Dataset](https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who) to analyze the role of 21 different factors on life expectancy in both developed and developing countries between 2000 and 2015. Based on the permutation importance plots, we found that the most important factor on life expectancy was suffering from HIV in developing countries and income composition in developed countries. 
 
-We then built two machine learning models: a classification tree model to predict the status of a country (developed or developing) as all the other dependent variables are known, and a regression decision tree model to predict future life expectancy in a given country given the evolution of life expectancy with time. Since the distributions of the different model features were proved to be different for developed and developing countries, we proposed two different regressuin decision tree models: one applicable to developed countries and the other one to developing countries. 
-After hyperparameters grid search and tuning, the classification tree model achieved a very good performance with accuracy, recall and F1-score of 0.97. The performance of the regression model was instead evaluated through the mean squared error, which was 0.03 ± 0.10 in developing countries and 0.08 ± 0.17 in developed countries. 
+We then built two machine learning models: a classification tree model to predict the status of a country (developed or developing) as all the other dependent variables are known, and a regression decision tree model to predict future life expectancy in a given country given the evolution of its life expectancy with time. Since the distributions of the different model features were proved to be different for developed and developing countries, we proposed two different regression decision tree models: one applicable to developed countries and the other to developing countries. 
 
-Considering that we could just relied on 15 life expectancy samples per country (two/three of which were necessary for testing), the time series forecasting models work pretty well, although they could lead to completely wrong predictions in some countries. In the future, the regression model should be trianed with more data, by increasing data granularity (introducting montly datapoints instead of yearly datapoints) and introducing more data of previous years for each country. 
+After hyperparameters grid search and tuning, the classification tree model achieved a very good performance with accuracy, recall and F1-score equal to 0.97. The performance of the regression model was instead evaluated through the mean squared error, which was 0.03 ± 0.10 in developing countries and 0.08 ± 0.17 in developed countries. 
+Considering that we could just relied on 15 life expectancy samples per country (two/three of which were necessary for testing), the performance of the time series forecasting models proved to be quite satisfactory in most of the countries. In the future, regression models should be trianed on more data, for example, by increasing data granularity (introducting montly datapoints instead of yearly datapoints).
 
 ### QA_System - [Github Link]() - [Application Deployment](http://willacuna.pythonanywhere.com/projects)
 
@@ -112,6 +112,52 @@ To predict the average user's HR for the next 5-10 heartbeats, we adopted an LST
 <figcaption>Figure 6 - Comparison between real and predicted average HR sequences for one subject </figcaption>
 <img src="assets/ecg_signals.png" width=400>
 </figure>
+
+### Future_Heart_Diseases - [Github Link]()
+
+Anderson, A., Gallo, C., & Oken, R. (2024, May 21). Binary Classification Model to Predict the Chance of Future Heart Diseases [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
+
+Final Project of the course "Machine Learning Operations"
+
+To predict the chance of future heart diseases based on a set heart disease indicators, we exploited the [Indicators of Heart Disease (2022 UPDATE) Dataset](https://www.kaggle.com/datasets/kamilpytlak/personal-key-indicators-of-heart-disease), including 300000 samples collected in 2020 and 200000 samples in 2022. 
+
+Data for 2020 and 2022 were first uniformed (by removing the data collected in 2020 or in 2022 only) and then preprocessed. Thus, we encoded/scaled the categorical/numerical variables, deleted the least significant features on the likelihood of heart diseases, and balanced the dataset. While numerical variables were scaled through the MinMaxScaler() function, the remaining categorical variables were rewritten as 0 and 1 if binary and through the LabelEncoder() function if polytomous. The most important features were identified through the chi-square test and data imbalance was solved through the oversampling technique SMOTE. 
+
+We then developed two xgboost algorithms require the same list of features (17) as input data and forecast the possibility of future heart diseases (class 0/1 means it is less/more likely to develop some form of heart disease): a benchmark model trained on the 2020 data and its fine-tuned version based on the 2022 data. The two models are equal to each other apart from the hyperparameter tuning aimed at optimizing five different hyperparameters: max_depth, eta, gamma, min_child_weight, and subsample. The two model performances (indicated in Table 2) were quantified in terms of accuracy, recall, precision, F1-score and ROC-AUC score. 
+
+<table>
+  <caption>Table 2 - Evaluation metrics for the benchmark and final models</caption>
+  <tr>
+    <th>Metric</th>
+    <th>Benchmark model</th>
+    <th>Final model</th>
+  </tr>
+  <tr>
+    <td>Accuracy</td>
+    <td>0.87</td>
+    <td>0.93</td>
+  </tr>
+  <tr>
+    <td>Precision (classes: 0/1)</td>
+    <td>0.86/0.87</td>
+    <td>0.91/0.94</td>
+  </tr>
+  <tr>
+    <td>Recall (classes: 0/1)</td>
+    <td>0.87/0.86</td>
+    <td>0.94/0.91</td>
+  </tr>
+  <tr>
+    <td>F1-score (classes: 0/1)</td>
+    <td>0.87/0.87</td>
+    <td>0.93/0.92</td>
+  </tr>
+  <tr>
+    <td>ROC-AUC score</td>
+    <td>0.95</td>
+    <td>0.98</td>
+  </tr>
+</table>
 
 ### AS_Linguist - [Github Link]()
 
