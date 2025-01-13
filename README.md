@@ -159,6 +159,8 @@ We then developed two xgboost algorithms require the same list of features (17) 
   </tr>
 </table>
 
+The fine-tuned model was finally deloyed in a cloud-based environment for real time and batch predictions and a CI/CD pipeline was developed for future model adjustments as a consequence of potential data shifts during production. 
+
 ### AS_Linguist - [Github Link]()
 
 Adhikari, S., Gallo, C., & Thai, P. (2024, August 12). A.S. Linguist Final Project [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
