@@ -302,7 +302,12 @@ We used the [Life Expectancy (WHO) Dataset](https://www.kaggle.com/datasets/kuma
 We then built two machine learning models: a classification tree model to predict the status of a country (developed or developing) as all the other dependent variables are known, and a regression decision tree model to predict future life expectancy in a given country given the evolution of its life expectancy with time. Since the distributions of the different model features were proved to be different for developed and developing countries, we proposed two different regression decision tree models: one applicable to developed countries and the other to developing countries. 
 
 After hyperparameters grid search and tuning, the classification tree model achieved a very good performance with accuracy, recall and F1-score equal to 0.97. The performance of the regression model was instead evaluated through the mean squared error, which was 0.03 ± 0.10 in developing countries and 0.08 ± 0.17 in developed countries. 
-Considering that we could just relied on 15 life expectancy samples per country (two/three of which were necessary for testing), the performance of the time series forecasting models proved to be quite satisfactory in most of the countries. In the future, regression models should be trianed on more data, for example, by increasing data granularity (introducting montly datapoints instead of yearly datapoints).
+Considering that we could just relied on 15 life expectancy samples per country (two/three of which were necessary for testing), the performance of the time series forecasting models proved to be quite satisfactory in most of the countries. An example of life expectancy prediction in Italy is given in Figure 8. In the future, regression models should be trianed on more data, for example, by increasing data granularity (introducting montly datapoints instead of yearly datapoints).
+
+<figure>
+<figcaption>Figure 8 - Predicted and true life expectancy in Italy</figcaption>
+<img src="assets/le_italy.png" width=500>
+</figure>
 
 ### COVID_Detection - [Github Link](https://github.com/CatGallo/COVID_Detection.git)
 
