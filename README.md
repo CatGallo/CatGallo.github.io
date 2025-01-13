@@ -197,7 +197,7 @@ The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While 
 
 <figure>
 <figcaption>Figure 3 - Structure and functioning of the IoT system </figcaption>
-<img src="assets/iot_system.png" width=600>
+<img src="assets/iot_system.png" width=500>
 </figure>
 
 <figure>
@@ -218,7 +218,7 @@ To predict the average user's HR for the next 5-10 heartbeats, we adopted an LST
 
 <figure>
 <figcaption>Figure 6 - Comparison between real and predicted average HR sequences for one subject </figcaption>
-<img src="assets/ecg_signals.png" width=400>
+<img src="assets/ecg_signals.png" width=500>
 </figure>
 
 ### Text_To_Image - [Github Link](https://github.com/CatGallo/Text_To_Image.git) - [Application Deployment](https://huggingface.co/sglasher/van-gogh-stable-diffusion)
@@ -233,7 +233,7 @@ We exploited a [pre-trained model](https://huggingface.co/CompVis/stable-diffusi
 
 <figure>
 <figcaption>Figure 7 - Examples of images returned by the model in response to the prompts written above the panels</figcaption>
-<img src="assets/vg_images.png" width=600>
+<img src="assets/vg_images.png" width=500>
 </figure>
 
 The model was quantitatively evaluated through a couple of metrics normally used for diffusion models: the [CLIP score](https://huggingface.co/docs/diffusers/conceptual/evaluation) - to determine the similarity level between one or more labels and the corresponding images returned by the model - and the [Fréchet Inception Distance](https://huggingface.co/docs/diffusers/conceptual/evaluation) - to determine the similarity level between one or more sets of images, real and fake. We got an average CLIP score of 28.89 with the couples label-image reported in Figure 7, while a FID of 677.19 was found by comparing 16 real Van Gogh paintings with the corresponding images produced by the model based on the titles of the 16 real masterpieces. Also, in order to assess the quality of the output images, 16 users were asked to evaluate the output images by assigning a score from 1 to 5 to five different criteria: relevance to the initial prompt (4.56 ± 0.7), Van Gogh style (3.94 ± 1.34), complexity (4.0 ± 0.87), creativity (4.0 ± 1.12) and general satisfaction (4.38 ± 0.78). 
