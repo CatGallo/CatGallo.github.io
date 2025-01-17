@@ -291,7 +291,7 @@ After training and validation, the performance of the final model was qualitativ
   </tr>
 </table>
 
-### Life_Expectancy - [Github Link](https://github.com/CatGallo/Machine_Learning_Team_Project)
+### Life_Expectancy - [Github Link](https://github.com/CatGallo/Life_Expectancy.git)
 
 Final Project of the course "Machine Learning: Fundamentals and Applications"
 
