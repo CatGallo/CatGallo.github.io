@@ -4,7 +4,7 @@ Hello! Welcome to my personal portfolio!
 ## Projects
 In the following you can find a list of projects developed during my MS in Applied Artificial Intelligence at San Diego University. 
 
-### AS_Linguist - [Github Link]()
+### AS_Linguist - [Github Link](https://github.com/CatGallo/AS_Linguist.git)
 
 Adhikari, S., Gallo, C., & Thai, P. (2024, August 12). A.S. Linguist Final Project [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
 
