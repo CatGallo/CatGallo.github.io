@@ -1,4 +1,3 @@
-# Caterina Gallo
 Hello! Welcome to my personal portfolio! 
 
 ## Projects
