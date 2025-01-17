@@ -137,7 +137,7 @@ We verified the good functioning of the CNN model on a set of 87000 different si
   </tr>
 </table>
 
-### Future_Heart_Diseases - [Github Link]()
+### Future_Heart_Diseases - [Github Link](https://github.com/CatGallo/Future_Heart_Diseases.git)
 
 Anderson, A., Gallo, C., & Oken, R. (2024, May 21). Binary Classification Model to Predict the Chance of Future Heart Diseases [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
 
