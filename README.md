@@ -184,7 +184,7 @@ To forecast the possibility of future heart diseases (class 0/1 means it is less
 
 The fine-tuned model was finally deloyed in a cloud-based environment for real time and batch predictions and a CI/CD pipeline was developed for future model adjustments as a consequence of potential data shifts during production. 
 
-### Human_Activity_Classification_Heart_Rate_Prediction - [Github Link]()
+### Human_Activity_Classification_Heart_Rate_Prediction - [Github Link](https://github.com/pawankt90/MSAAI-530-IOT-FinalProject/blob/main/MSAAI-530-Group3-Human-Activity-Monitoring.ipynb)
 
 DeVoe, K., Gallo, C., & Tahiliani, P. (n.d.). Human Activity Classification and Heart Rate Prediction [Unpublished manuscript]. Shiley-Marcos School of Engineering, University of San Diego
 
@@ -330,7 +330,7 @@ To train and test these models we used the [Covid X-Ray Dataset](https://www.kag
 
 VGG16 showed the highest performance with 94.2% accuracy, 98.5% sensitivity, and 91.1% specificity. InceptionV3 trailed closely with 93.4% accuracy, 93.5% sensitivity and 93.3% specificity, while ResNet50 had 84.7% accuracy, 91.6% sensitivity and 79.6% specificity. Despite the high scores associated with the three models, additional adjustments would be necessary in future model developments. The ResNet50 model would in fact require a greater number of epochs, which we reduced due to memory limitations. Also, the head layer structure and parameters like the learning rate should be individually optimized for each model instead of keeping them consistent across models,  as we did here to get a direct comparison. Finally, additional patient-specific information, e.g. the number of days from the first symptoms or the presence of other clinical conditions, could further improve the capability of our models to early detect Covid-19 and similar respiratory diseases like pneumonia. 
 
-### Study_Of_Obesity - [Github Link]()
+### Study_Of_Obesity - [Github Link](https://github.com/wacuna1/MS-AAI-v1)
 
 Final Project of the course "Probability and Statistics for Artificial Intelligence"
 
