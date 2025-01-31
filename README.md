@@ -148,6 +148,8 @@ The data of 2020 and 2022 were first uniformed (by removing the features collect
 
 To forecast the possibility of future heart diseases (class 0/1 means it is less/more likely to develop some form of heart disease), we developed two xgboost algorithms requiring the same list of features (BMI, smoking, drinking alcohol, previous strokes, physical and mental health, walking, sex, age category, race, diabetes, physical activity, general health, asthma, kidney diseases and skin cancer) as input data: a benchmark model trained on the 2020 data and its fine-tuned version on the 2022 data. The fine-tuned model is equal to the benchmark model apart from the hyperparameter tuning aimed at optimizing five different hyperparameters: max_depth, eta, gamma, min_child_weight and subsample to makimaze the F1-score. The two model performances (indicated in Table 2) were quantified in terms of accuracy, recall, precision, F1-score and ROC-AUC score. 
 
+The fine-tuned model was finally deployed in a cloud-based environment for real time and batch predictions, and a CI/CD pipeline was developed for future model adjustments as a consequence of potential data shifts during production. 
+
 <table>
   <caption>Table 2 - Evaluation metrics for the benchmark and final model</caption>
   <tr>
@@ -181,8 +183,6 @@ To forecast the possibility of future heart diseases (class 0/1 means it is less
     <td>0.98</td>
   </tr>
 </table>
-
-The fine-tuned model was finally deployed in a cloud-based environment for real time and batch predictions, and a CI/CD pipeline was developed for future model adjustments as a consequence of potential data shifts during production. 
 
 ### Human_Activity_Classification_Heart_Rate_Prediction - [Github Link](https://github.com/pawankt90/MSAAI-530-IOT-FinalProject/blob/main/MSAAI-530-Group3-Human-Activity-Monitoring.ipynb)
 
