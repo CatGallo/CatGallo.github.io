@@ -192,7 +192,7 @@ Final Project of the course "Data Analytics and Internet of Things"
 
 We proposed a physical activity tracking system that exploits machine learning algorithms to predict the physical activity of the user (among a list of 12 different activities: standing still, sitting relaxing, lying down, walking, cycling, jogging, running, climbing stairs, arm elevation, knee bend, waist bends and front back jump) and the average user's heart rate (HR) for the next 5-10 heartbeats. 
 
-The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While the chest sensor consists of an accelerometer to measure position and 2 electrocardiogram sensors, the smartwatch and the ankle sensors contain an accelerometer, a gyroscope to detect motion, and a magnetometer to recognize changes in orientation. The chest and ankle sensors are also equipped with a Bluetooth connectivity module to transfer data to the smartwatch. The latter then runs the machine learning algorithms we developed in the form of edge processing and shows the final data in the form of key summary statistics for the user to see. A diagram of the IoT device is given in Figure 3, while an example of tableau dashboard for this IoT device is provided in Figure 4.
+The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While the chest sensor consists of an accelerometer to measure position and 2 electrocardiogram sensors, the smartwatch and the ankle sensors contain an accelerometer, a gyroscope to detect motion, and a magnetometer to recognize changes in orientation. The chest and ankle sensors are also equipped with a Bluetooth connectivity module to transfer data to the smartwatch. The latter then runs the machine learning algorithms we developed in the form of edge processing and shows the final data in the form of key summary statistics for the user to see. A diagram of the IoT device is given in Figure 3 while an example of tableau dashboard for this IoT device is provided in Figure 4.
 
 <figure>
 <figcaption>Figure 3 - Structure and functioning of the IoT system </figcaption>
@@ -200,7 +200,7 @@ The IoT system includes a smartwatch, an ankle sensor and a chest sensor. While 
 </figure>
 
 <figure>
-<figcaption>Figure 4 - Example of data the IoT system could show to user </figcaption>
+<figcaption>Figure 4 - Example of data the IoT system could show to the user </figcaption>
 <img src="assets/Dashboard.png" width=500>
 </figure>
 
@@ -209,11 +209,11 @@ Our machine learning algorithms were built based on the [mHealth Dataset](https:
 To classify the activity performed by the user we tested three different models, a K Nearest Neighbors (KNN) n = 6 model, a Support Vector Machine (SVM) model, and a Random Forest Classifier (RFC) model with the scikit-learn default number of estimators set at 100. Input data were extracted from the time series recorded by all the sensors for the first 6 subjects, by calculating the rolling average and standard deviation over a set period of 4 seconds for each of the available features. The RFC model showed the best overall performance with a 92.9% validation accuracy and a 97.9% accuracy on the testing set. We verified that our RFC model can misclassify climbing stairs with walking and knee bends, thereby leading to sporadic errors as shown in Figure 5. 
 
 <figure>
-<figcaption>Figure 5 - Confusion matrix for the RFC model one test subject </figcaption>
+<figcaption>Figure 5 - Confusion matrix for the RFC model for one test subject </figcaption>
 <img src="assets/cm_rfc_model.png" width=500>
 </figure>
 
-To predict the average user's HR for the next 5-10 heartbeats, we adopted an LSTM model. This time, considering that ECGs can drammatically change from one subject to another, we trained one subject-specific LSTM model starting from the ECG signal of one subject only. The training set is nothing more than a sequence of average HR values, each representing the average of 5 sequential HRs in a portion of the original HR sequence extracted from the ECG signal of the chosen subject. HRs can be calculated as 60/RRs, with RRs the distances between siccessive peaks in an ECG signal. By comparing the real and predicted average sequence of HR values for the chosen subject (see Figure 6), we got the following errors: mean+/-std: -0.94+/-13.37%, 25th percentile: -9.77%, 50th percentile: -0.14%, 75th percentile: 8.80%. In actual fact, the mean error is very low and the errors within the 25th and 75th percentiles are acceptable for our application.
+To predict the average user's HR for the next 5-10 heartbeats, we adopted an LSTM model. This time, considering that ECGs can drammatically change from one subject to another, we trained one subject-specific LSTM model starting from the ECG signal of one subject only. The training set is nothing more than a sequence of average HR values, each representing the average of 5 sequential HRs in a portion of the original HR sequence extracted from the ECG signal of the chosen subject. HRs can be calculated as 60/RRs, with RRs the distances between successive peaks in an ECG signal. By comparing the real and predicted average sequence of HR values for the chosen subject (see Figure 6), we got the following errors: mean+/-std: -0.94+/-13.37%, 25th percentile: -9.77%, 50th percentile: -0.14%, 75th percentile: 8.80%. In actual fact, the mean error is very low and the errors within the 25th and 75th percentiles are acceptable for our application.
 
 <figure>
 <figcaption>Figure 6 - Comparison between real and predicted average HR sequences for one subject </figcaption>
